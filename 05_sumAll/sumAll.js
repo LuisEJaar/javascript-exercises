@@ -3,11 +3,17 @@ const sumAll = function(entry1,entry2) {
     //initialize return
     let total = 0;
 
+    //test for negative numbers
     if (entry1 < 0 || entry2 < 0) {
         return 'ERROR';
     }
 
-    //logic to switch entries
+    //test if any entry is not a number
+    if (typeof entry1 !== 'number' || typeof entry2 !== 'number') {
+        return 'ERROR';
+      }
+
+    //switch entries if 2nd is larger
     if (entry1 > entry2) {
         temp = entry1;
         entry1 = entry2;
