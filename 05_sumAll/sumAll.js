@@ -3,6 +3,10 @@ const sumAll = function(entry1,entry2) {
     //initialize return
     let total = 0;
 
+    if (entry1 < 0 || entry2 < 0) {
+        return 'ERROR';
+    }
+
     //logic to switch entries
     if (entry1 > entry2) {
         temp = entry1;
