@@ -3,7 +3,7 @@ const ftoc = function(tempF) {
   if (tempC % 1 === 0){
     return tempC;
   } else {
-  return tempC.toFixed(1);
+  return parseFloat(tempC.toFixed(1));
   }
 };
 
@@ -12,7 +12,7 @@ const ctof = function(tempC) {
   if (tempF % 1 === 0){
     return tempF;
   } else {
-  return tempF.toFixed(1);
+  return parseFloat(tempF.toFixed(1));
   }
 };
 
