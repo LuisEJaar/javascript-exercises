@@ -40,13 +40,23 @@ const multiply = function(array) {
   };
 };
 
-
-const power = function() {
-	
+const power = function(input1,input2) {
+  let answer = Number(input1) ** Number(input2);
+  return answer;
 };
 
-const factorial = function() {
-	
+const factorial = function(input) {
+  let length = input;
+  let answer = 1;
+  if (input === 0) {
+    return 1;
+  } else {for (i = 1; i <= length; i++) {
+    answer = answer * i;
+    console.log(i);
+    if (i === length) {
+    return answer;
+    };
+  };};
 };
 
 // Do not edit below this line
