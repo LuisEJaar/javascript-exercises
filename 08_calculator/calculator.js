@@ -3,8 +3,9 @@ const add = function(input1, input2) {
   return addition;
 };
 
-const subtract = function() {
-	
+const subtract = function(input1, input2) {
+  let subtraction = Number(input1) - Number(input2);
+  return subtraction;
 };
 
 const sum = function() {
