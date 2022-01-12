@@ -24,9 +24,22 @@ const sum = function(array) {
   };
 };
 
-const multiply = function() {
-
+const multiply = function(array) {
+	let length = array.length;
+  if (length === 0){
+    let total = 0;
+    return total;
+  } else {
+    let total = 1;
+    for (i=0; i < length; i++){
+      total = total * array[i]; 
+      if (i === length - 1){
+        return total;
+      };
+    };
+  };
 };
+
 
 const power = function() {
 	
