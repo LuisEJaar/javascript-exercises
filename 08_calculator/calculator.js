@@ -8,8 +8,20 @@ const subtract = function(input1, input2) {
   return subtraction;
 };
 
-const sum = function() {
-	
+const sum = function(array) {
+	let length = array.length;
+  console.log(array.length);
+  let total = 0;
+  if (length === 0){
+    return total;
+  } else {
+    for (i=0; i < length; i++){
+      total += array[i]; 
+      if (i === length - 1){
+        return total;
+      };
+    };
+  };
 };
 
 const multiply = function() {
