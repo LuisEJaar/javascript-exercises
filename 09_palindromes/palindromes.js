@@ -1,10 +1,20 @@
 const palindromes = function (textEntry) {
+    textEntry = textEntry.split(" ").join("");
+    let startingLength = textEntry.length; 
+    let pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+    for (i=0; i<=startingLength;i++) {
+        if (pattern.test(textEntry.charAt(i)) === true) {
+            textEntry = textEntry.split(textEntry.charAt(i)).join("");  
+            console.log(textEntry);
+        };
+    };
+    
     let length = textEntry.length;
-    let stringEnd = length-1;
+    let arrayEnd = length-1;
     if (length % 2 === 0){ //if its even
         for (i=0; i <= length/2; i++) {
             //if end is equal to beginning and so on
-            if (textEntry.charAt(i) === textEntry.charAt(stringEnd-i)){
+            if (textEntry.charAt(i) === textEntry.charAt(arrayEnd-i)){
                 continue;
             } else {
                 return false;
@@ -15,7 +25,7 @@ const palindromes = function (textEntry) {
         //this one needs to stop before the middle
         for (i=0; i <= (length/2)-1; i++) {
             //if end is equal to beginning and so on
-            if (textEntry.charAt(i) === textEntry.charAt(stringEnd-i)){
+            if (textEntry.charAt(i) === textEntry.charAt(arrayEnd-i)){
                 continue;
             } else {
                 return false;
