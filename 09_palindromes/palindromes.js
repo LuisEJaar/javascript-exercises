@@ -1,9 +1,11 @@
 const palindromes = function (textEntry) {
     textEntry = textEntry.split(" ").join("");
+    textEntry = textEntry.toLowerCase();
     let startingLength = textEntry.length; 
     let pattern = new RegExp(/[~`!#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?]/);
+    let period = '.';
     for (i=0; i<=startingLength;i++) {
-        if (pattern.test(textEntry.charAt(i)) === true) {
+        if (pattern.test(textEntry.charAt(i)) === true || textEntry.charAt(i) === period) {
             textEntry = textEntry.split(textEntry.charAt(i)).join("");  
             console.log(textEntry);
         };
